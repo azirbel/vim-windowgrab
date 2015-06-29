@@ -32,12 +32,12 @@ All credit to `wesQ3` and `sgriffin` for the core implementation.
 1. Navigate to the window you'd like to move or swap
 2. Press `<leader>c` to grab the file
 
-*To Swap*
+To Swap:
 
 3. Navigate to the window you'd like to swap with
 4. Press `<leader>c` again
 
-*To Move the Window*
+To Move the Window:
 
 3. Navigate to the space you'd like to move the window to
 4. Press `<leader>v` (this will open the file in the new location and close the
