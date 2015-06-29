@@ -1,0 +1,67 @@
+*windowgrab.txt*              For Vim version 7.3              *windowgrab*
+
+                              WINDOWGRAB MANUAL
+
+1. About WindowGrab                                |windowgrab-about|
+2. Quick Start                                     |windowgrab-quickstart|
+3. Key Mappings and Functions                      |windowgrab-keymappings|
+                                                   |windowgrab-functions|
+4. Options                                         |windowgrab-options|
+
+=============================================================================
+1. ABOUT WINDOWGRAB ~
+                                                             *windowgrab-about*
+
+A window swapper copied from `wesQ3`'s WindowSwap.vim, but with modified UX.
+
+Like WindowSwap, this plugin's purpose is to help with arbirary window swaps
+that preserve your layout. However, WindowSwap only handles swaps; often what
+I want to do is *move* a window. This is useful in situations where I am
+diving through many files and finally find a file that is important; I want to
+be able to move the file I found to a better place in my layout.
+
+WindowGrab helps you grab your buffers between existing split windows without
+affecting your current split layout.
+
+All credit to `wesQ3` and `sgriffin` for the core implementation.
+
+=============================================================================
+2. QUICK START ~
+                                                        *windowgrab-quickstart*
+
+1. Navigate to the window you'd like to move or swap
+2. Press `<leader>c` to grab the file
+
+*To Swap*
+
+3. Navigate to the window you'd like to swap with
+4. Press `<leader>c` again
+
+*To Move the Window*
+
+3. Navigate to the space you'd like to move the window to
+4. Press `<leader>v` (this will open the file in the new location and close the
+  old window)
+
+=============================================================================
+3. KEY MAPPINGS ~
+                                  *windowgrab-keymappings* *windowgrab-functions*
+
+First of all, you can prevent these default bindings by setting
+`g:windowgrab_map_keys` to `0` in your `.vimrc`.
+
+*WindowGrab#DoWindowGrab*                                  `<leader>c`
+Mark current window if none is marked, swap current window with marked window
+if mark is currently set. Clears marked window flag after swapping.
+
+*WindowGrab#MoveWindow*                                    `<leader>v`
+Moves the grabbed window to the current window, closing the original. If mark
+is not set, does nothing.
+
+=============================================================================
+4. OPTIONS ~
+                                                           *windowgrab-options*
+
+*g:windowgrab_map_keys*                               default: `1`
+Allow WindowGrab to map its default keys. Set to `0` to prevent any key
+mappings.
