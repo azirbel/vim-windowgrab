@@ -2,8 +2,8 @@
 
 Grab and {move, swap} a window without changing your layout.
 
-A window swapper copied from [WindowSwap.vim by wesQ3][1], but with modified UX
-that is better for my workflow.
+A window swapper copied from [WindowSwap.vim by wesQ3][1], but with modified
+UX.
 
 Like WindowSwap, this plugin's purpose is to help with arbirary window swaps
 that preserve your layout. However, WindowSwap only handles swaps; often what
