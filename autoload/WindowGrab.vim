@@ -50,10 +50,13 @@ endfunction
 
 " Moves the grabbed window to the current (destination) window, closing the
 " original.
-" TODO: Do nothing if the destination is the same as the marked window
 function! WindowGrab#MoveWindow()
   if !WindowGrab#HasMarkedWindow()
     echom "No window marked to move! Mark a window first."
+    return
+  elseif WindowGrab#GetMarkedWindowNum() == winnr()
+    echom "Marked and destination windows are the same; aborting."
+    call WindowGrab#ClearMarkedWindowNum()
     return
   endif
   let destNum = winnr()
