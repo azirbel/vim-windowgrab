@@ -52,14 +52,14 @@ endfunction
 " original.
 " TODO: Do nothing if the destination is the same as the marked window
 function! WindowGrab#MoveWindow()
-  if !WindowSwap#HasMarkedWindow()
+  if !WindowGrab#HasMarkedWindow()
     echom "No window marked to move! Mark a window first."
     return
   endif
   let destNum = winnr()
   let destBuf = bufnr("%")
   " Switch back to the marked window
-  exe WindowSwap#GetMarkedWindowNum() . "wincmd w"
+  exe WindowGrab#GetMarkedWindowNum() . "wincmd w"
   let markedBuf = bufnr("%")
   " Close the marked window
   exe "close"
@@ -68,5 +68,5 @@ function! WindowGrab#MoveWindow()
   " Open marked buffer in destination window.
   " Hide and open so that we aren't prompted and keep history
   exe 'hide buf' markedBuf
-  call WindowSwap#ClearMarkedWindowNum()
+  call WindowGrab#ClearMarkedWindowNum()
 endfunction

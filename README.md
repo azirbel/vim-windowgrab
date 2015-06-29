@@ -40,8 +40,8 @@ changing the mappings:
 
 ```VimL
 let g:windowgrab_map_keys = 0 "prevent default bindings
-nnoremap <silent> <leader>c :call WindowSwap#DoWindowGrab()<CR>
-nnoremap <silent> <leader>v :call WindowSwap#MoveWindow()<CR>
+nnoremap <silent> <leader>c :call WindowGrab#DoWindowGrab()<CR>
+nnoremap <silent> <leader>v :call WindowGrab#MoveWindow()<CR>
 ```
 
 ## Installation
