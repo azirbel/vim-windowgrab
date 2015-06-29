@@ -5,11 +5,11 @@ Grab and {move, swap} a window without changing your layout.
 A window swapper copied from [WindowSwap.vim by wesQ3][1], but with modified
 UX.
 
-Like WindowSwap, this plugin's purpose is to help with arbirary window swaps
-that preserve your layout. However, WindowSwap only handles swaps; often what
-I want to do is *move* a window. This is useful in situations where I am diving
-through many files and finally find a file that is important; I want to be able
-to move the file I found to a better place in my layout.
+Like WindowSwap, this plugin's purpose is to help with arbitrary window
+movement that preserves your layout. However, WindowSwap only handles swaps;
+often what I want to do is *move* a window. This is useful in situations where
+I am diving through many files and finally find a file that is important; I
+want to be able to move the file I found to a better place in my layout.
 
 All credit to [wesQ3][1] and [sgriffin][2] for the core implementation.
 
@@ -23,9 +23,9 @@ All credit to [wesQ3][1] and [sgriffin][2] for the core implementation.
 3. Navigate to the window you'd like to swap with
 4. Press `<leader>c` again
 
-#### To Move the Window
+#### To Move
 
-3. Navigate to the space you'd like to move the window to
+3. Navigate to where you'd like to move the marked window
 4. Press `<leader>v` (this will open the file in the new location and close the
   old window)
 
@@ -33,7 +33,7 @@ All credit to [wesQ3][1] and [sgriffin][2] for the core implementation.
 
 Defaults:
 * Grab or swap a window with `<leader>c`
-* Move the grabbed window instead with `<leader>v`
+* Move the grabbed window with `<leader>v`
 
 Customize the commands to your liking by dropping this in your `.vimrc` and
 changing the mappings:
